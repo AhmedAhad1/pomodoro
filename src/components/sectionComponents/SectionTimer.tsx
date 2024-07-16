@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import PomoAllButtons from "../pomoButtons/PomoAllButtons";
 import PomoButton from "../pomoButtons/PomoButton";
+import Timer from "../timer/Timer";
 
 const SectionTimer = () => {
+  const [showTimer, setShowTimer] = useState(false);
+
+  const handleClick = () => {
+    setShowTimer(true);
+  };
   return (
     <div className="py-16 px-16 grid grid-cols-12">
       <div className="col-span-2 ">
@@ -10,9 +16,11 @@ const SectionTimer = () => {
       </div>
 
       <div className="col-span-8 flex justify-center">
-        <figure className="">
-          <img src="/timer.png" alt="" className="w-72" />
-        </figure>
+        <div className="bg-pomo-button w-80 h-80 rounded-full relative">
+          <div className="absolute left-[85px] top-1/4">
+            <Timer />
+          </div>
+        </div>
       </div>
 
       <div className="col-span-2 ">
