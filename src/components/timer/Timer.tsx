@@ -1,5 +1,6 @@
 import React from "react";
-import Countdown from "react-countdown";
+import Countdown, { CountdownApi } from "react-countdown";
+import CountdownApiExample from "./test";
 const Timer = () => {
   const Completionist = () => <span>You are good to go!</span>;
 
